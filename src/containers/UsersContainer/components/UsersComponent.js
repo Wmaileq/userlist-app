@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import PropTypes from "prop-types";
 import {
   List,
@@ -60,4 +60,5 @@ UsersComponent.propTypes = {
     })
   ).isRequired,
 };
-export default UsersComponent;
+
+export default memo(UsersComponent);

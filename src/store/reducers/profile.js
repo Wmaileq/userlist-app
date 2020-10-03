@@ -3,16 +3,16 @@ import {
   LOAD_PROFILE_FAILURE,
   LOAD_PROFILE_REQUEST,
   LOAD_PROFILE_SUCCESS,
+  RESET_PROFILE,
 } from "../actions/profile";
 
 const initialState = {
   profile: null,
   isLoading: false,
   isError: false,
-  isAuthenticated: false,
 };
 
-const users = handleActions(
+const profile = handleActions(
   {
     [LOAD_PROFILE_REQUEST]: (state) => ({
       ...state,
@@ -30,7 +30,12 @@ const users = handleActions(
       isError: true,
       isLoading: false,
     }),
+    [RESET_PROFILE]: (state) => ({
+      ...state,
+      profile: null,
+    }),
   },
   initialState
 );
-export default users;
+
+export default profile;

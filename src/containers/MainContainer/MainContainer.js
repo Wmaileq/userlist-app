@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 
 const MainContainer = () => {
   return <h1>Just useless main page</h1>;
 };
 
-export default MainContainer;
+export default memo(MainContainer);

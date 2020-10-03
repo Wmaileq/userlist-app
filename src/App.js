@@ -7,9 +7,12 @@ import { history } from "./store/store";
 import MainContainer from "./containers/MainContainer/MainContainer";
 import UsersContainer from "./containers/UsersContainer";
 import LoginContainer from "./containers/LoginContainer";
+import ProfileContainer from "./containers/ProfileContainer";
 
 import ProtectedRoute from "./components/ProtectedRoute";
 import Layout from "./components/Layout";
+
+import { routes } from "./constants";
 
 import "./App.css";
 
@@ -17,16 +20,16 @@ const App = () => (
   <ConnectedRouter history={history}>
     <Layout>
       <Switch>
-        <ProtectedRoute path="/profile">
-          <UsersContainer />
+        <ProtectedRoute path={routes.profile}>
+          <ProfileContainer />
         </ProtectedRoute>
-        <Route path="/login">
+        <Route path={routes.login}>
           <LoginContainer />
         </Route>
-        <Route path="/users">
+        <Route path={routes.users}>
           <UsersContainer />
         </Route>
-        <Route exact path="/">
+        <Route exact path={routes.main}>
           <MainContainer />
         </Route>
       </Switch>

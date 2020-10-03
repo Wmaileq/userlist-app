@@ -12,7 +12,7 @@ const initialState = {};
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["profile"],
+  whitelist: ["auth"],
 };
 const sagaMiddleware = createSagaMiddleware();
 export const history = createBrowserHistory();

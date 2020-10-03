@@ -8,7 +8,7 @@ import {
   selectIsLoading,
   selectUsers,
 } from "../../store/selectors/users";
-import { loadUsers } from "../../store/actions/users";
+import { loadUsers, resetUsers } from "../../store/actions/users";
 
 const UsersContainer = () => {
   const dispatch = useDispatch();
@@ -18,6 +18,10 @@ const UsersContainer = () => {
 
   useEffect(() => {
     dispatch(loadUsers());
+
+    return () => {
+      dispatch(resetUsers());
+    };
   }, [dispatch]);
 
   return (

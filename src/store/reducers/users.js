@@ -3,6 +3,7 @@ import {
   LOAD_USERS_FAILURE,
   LOAD_USERS_REQUEST,
   LOAD_USERS_SUCCESS,
+  RESET_USERS,
 } from "../actions/users";
 
 const initialState = {
@@ -28,6 +29,10 @@ const users = handleActions(
       ...state,
       isError: true,
       isLoading: false,
+    }),
+    [RESET_USERS]: (state) => ({
+      ...state,
+      users: [],
     }),
   },
   initialState
