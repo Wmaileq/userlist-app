@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
@@ -9,6 +9,7 @@ import {
 import { loadProfile, resetProfile } from "../../store/actions/profile";
 
 import ProfileComponent from "./components/ProfileComponent";
+import { logout } from "../../store/actions/auth";
 
 const ProfileContainer = () => {
   const dispatch = useDispatch();
@@ -24,11 +25,16 @@ const ProfileContainer = () => {
     };
   }, [dispatch]);
 
+  const onLogoutClick = useCallback(() => {
+    dispatch(logout());
+  }, [dispatch]);
+
   return (
     <ProfileComponent
       profile={profile}
       isLoading={isLoading}
       isError={isError}
+      onLogoutClick={onLogoutClick}
     />
   );
 };
