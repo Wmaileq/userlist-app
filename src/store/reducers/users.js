@@ -25,7 +25,7 @@ const users = handleActions(
       isError: false,
       isLoading: false,
     }),
-    [LOAD_USERS_FAILURE]: (state, { payload }) => ({
+    [LOAD_USERS_FAILURE]: (state) => ({
       ...state,
       isError: true,
       isLoading: false,

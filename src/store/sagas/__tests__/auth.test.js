@@ -1,6 +1,6 @@
 import { runSaga } from "@redux-saga/core";
 import { authSaga } from "../auth";
-import { LOGIN_SUCCESS, loginFailure, loginSuccess } from "../../actions/auth";
+import { loginFailure, loginSuccess } from "../../actions/auth";
 
 describe("users sagas tests", () => {
   it("should successfully login user", async () => {
