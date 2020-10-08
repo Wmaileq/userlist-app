@@ -44,6 +44,10 @@ const ProfileComponent = ({ isLoading, profile, isError, onLogoutClick }) => (
   </Container>
 );
 
+ProfileComponent.defaultProps = {
+  profile: null,
+};
+
 ProfileComponent.propTypes = {
   isLoading: PropTypes.bool.isRequired,
   profile: PropTypes.shape({

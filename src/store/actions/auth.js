@@ -3,10 +3,10 @@ export const LOGIN_REQUEST = "LOGIN_REQUEST";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAILURE = "LOGIN_FAILURE";
 
-export const login = (login, password) => ({
+export const login = (username, password) => ({
   type: LOGIN_REQUEST,
   payload: {
-    login,
+    login: username,
     password,
   },
 });

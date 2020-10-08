@@ -14,6 +14,7 @@ function* loadUsersSaga() {
     const users = response.data.results.map(normalizeUser);
     yield put(loadUsersSuccess(users));
   } catch (e) {
+    // eslint-disable-next-line no-console
     console.log(e);
     yield put(loadUsersFailure(e));
   }

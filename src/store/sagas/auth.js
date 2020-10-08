@@ -13,6 +13,7 @@ export function* authSaga({ payload }) {
       yield put(loginFailure("Username or password is incorrect."));
     }
   } catch (e) {
+    // eslint-disable-next-line no-console
     console.log(e);
     yield put(loginFailure("Oops... Some connection error happened."));
   }

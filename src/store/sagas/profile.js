@@ -14,6 +14,7 @@ export function* loadProfileSaga() {
     const [user] = response.data.results.map(normalizeUser);
     yield put(loadProfileSuccess(user));
   } catch (e) {
+    // eslint-disable-next-line no-console
     console.log(e);
     yield put(loadProfileFailure(e));
   }

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { useLocation, Link } from "react-router-dom";
 import { Container, AppBar, Tabs, Tab } from "@material-ui/core";
 
@@ -36,6 +37,10 @@ const Layout = ({ children }) => {
       <Container>{children}</Container>
     </>
   );
+};
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;
