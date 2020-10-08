@@ -31,7 +31,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && yarn test --watchAll=false"
     }
   },
   "lint-staged": {
@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "^11.0.4",
-    "eslint": "^7.10.0",
+    "eslint": "6.6.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-import": "^2.22.1",
