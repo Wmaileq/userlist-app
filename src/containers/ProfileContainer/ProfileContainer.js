@@ -7,9 +7,9 @@ import {
   selectIsLoading,
 } from "../../store/selectors/profile";
 import { loadProfile, resetProfile } from "../../store/actions/profile";
+import { logout } from "../../store/actions/auth";
 
 import ProfileComponent from "./components/ProfileComponent";
-import { logout } from "../../store/actions/auth";
 
 const ProfileContainer = () => {
   const dispatch = useDispatch();

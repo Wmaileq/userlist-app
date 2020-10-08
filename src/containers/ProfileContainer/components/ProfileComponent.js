@@ -21,7 +21,7 @@ const ProfileComponent = ({ isLoading, profile, isError, onLogoutClick }) => (
       <Alert severity="error">Oops... Profile loading error.</Alert>
     ) : (
       profile && (
-        <Grid container>
+        <Grid container spacing={2}>
           <Grid xs="auto" item>
             <img alt={profile.name} src={profile.image} />
           </Grid>
